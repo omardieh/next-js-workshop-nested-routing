@@ -1,0 +1,36 @@
+[
+  {
+    "user_id": 1,
+    "name": "John",
+    "gender": "male",
+    "posts": [
+      {
+        "post_id": 1,
+        "title": "Welcome to React.js",
+        "hidden": false
+      },
+      {
+        "post_id": 2,
+        "title": "Welcome to Next.js",
+        "hidden": false
+      }
+    ]
+  },
+  {
+    "user_id": 2,
+    "name": "Sally",
+    "gender": "female",
+    "posts": [
+      {
+        "post_id": 1,
+        "title": "Learn Next.js",
+        "hidden": false
+      },
+      {
+        "post_id": 2,
+        "title": "Learn React.js",
+        "hidden": false
+      }
+    ]
+  }
+]
