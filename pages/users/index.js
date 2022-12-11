@@ -1,19 +1,15 @@
+import axios from "axios";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import styles from "./Users.module.css";
-import { getUsers } from "/pages/api/users";
 
-// SSR Example
-export const getServerSideProps = async () => {
-  const users = await getUsers();
-  return {
-    props: {
-      users,
-    },
-  };
-};
+// CSR Example
+export default function Users() {
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    axios.get("/api/users").then((resp) => setUsers(resp.data));
+  }, []);
 
-// Users React Component
-export default function Users({ users }) {
   return (
     <div className={styles.container}>
       <Head>
